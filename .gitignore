@@ -1,0 +1,16 @@
+# Virtual Environments
+venv/
+env/
+venv313/
+.venv/
+
+# Python compiled files (auto-generated)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Mac OS system files
+.DS_Store
+
+# Streamlit specific
+.streamlit/

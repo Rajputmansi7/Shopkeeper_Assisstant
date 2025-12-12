@@ -1,0 +1,132 @@
+{
+    "meta": { "currency": "INR" },
+    "nodes": [
+      { "id": "cat_dairy", "type": "category", "label": "Dairy Products" },
+      { "id": "cat_milk", "type": "category", "label": "Milk" },
+      { "id": "cat_yogurt", "type": "category", "label": "Yogurt" },
+      { "id": "cat_cheese", "type": "category", "label": "Cheese" },
+      { "id": "cat_beverages", "type": "category", "label": "Beverages" },
+      { "id": "cat_soda", "type": "category", "label": "Soda" },
+      { "id": "cat_juice", "type": "category", "label": "Fruit Juice" },
+      { "id": "cat_snacks", "type": "category", "label": "Snacks" },
+      { "id": "cat_chips", "type": "category", "label": "Chips" },
+      { "id": "cat_biscuits", "type": "category", "label": "Biscuits" },
+  
+      { "id": "brand_amul", "type": "brand", "label": "Amul" },
+      { "id": "brand_nestle", "type": "brand", "label": "Nestle" },
+      { "id": "brand_britannia", "type": "brand", "label": "Britannia" },
+      { "id": "brand_coke", "type": "brand", "label": "Coca Cola" },
+      { "id": "brand_pepsi", "type": "brand", "label": "Pepsi" },
+      { "id": "brand_real", "type": "brand", "label": "Real" },
+      { "id": "brand_lays", "type": "brand", "label": "Lays" },
+      { "id": "brand_pringles", "type": "brand", "label": "Pringles" },
+      { "id": "brand_sofit", "type": "brand", "label": "Sofit" },
+  
+      { "id": "attr_lactose_free", "type": "attribute", "label": "Lactose Free" },
+      { "id": "attr_sugar_free", "type": "attribute", "label": "Sugar Free" },
+      { "id": "attr_veg", "type": "attribute", "label": "Vegetarian" },
+      { "id": "attr_low_fat", "type": "attribute", "label": "Low Fat" },
+  
+      { "id": "p_amul_taaza", "type": "product", "label": "Amul Taaza Fresh Milk", "price": 24, "in_stock": false },
+      { "id": "p_amul_gold", "type": "product", "label": "Amul Gold Full Cream", "price": 32, "in_stock": true },
+      { "id": "p_nestle_a_plus", "type": "product", "label": "Nestle A+ Nourish Milk", "price": 45, "in_stock": true },
+      { "id": "p_sofit_soymilk", "type": "product", "label": "Sofit Soya Milk", "price": 100, "in_stock": true },
+  
+      { "id": "p_amul_masti", "type": "product", "label": "Amul Masti Dahi", "price": 30, "in_stock": true },
+      { "id": "p_nestle_curd", "type": "product", "label": "Nestle Slim Dahi", "price": 35, "in_stock": false },
+  
+      { "id": "p_coke_classic", "type": "product", "label": "Coca Cola Classic", "price": 40, "in_stock": false },
+      { "id": "p_coke_diet", "type": "product", "label": "Diet Coke", "price": 45, "in_stock": true },
+      { "id": "p_pepsi_regular", "type": "product", "label": "Pepsi", "price": 38, "in_stock": true },
+      { "id": "p_real_orange", "type": "product", "label": "Real Fruit Power Orange", "price": 110, "in_stock": true },
+  
+      { "id": "p_lays_classic", "type": "product", "label": "Lays Classic Salted", "price": 20, "in_stock": false },
+      { "id": "p_lays_onion", "type": "product", "label": "Lays Cream & Onion", "price": 20, "in_stock": true },
+      { "id": "p_pringles_orig", "type": "product", "label": "Pringles Original", "price": 105, "in_stock": true },
+      { "id": "p_brit_marie", "type": "product", "label": "Britannia Marie Gold", "price": 25, "in_stock": true },
+      { "id": "p_brit_digestive", "type": "product", "label": "Britannia NutriChoice", "price": 50, "in_stock": true }
+    ],
+    "links": [
+      { "source": "cat_milk", "target": "cat_dairy", "relation": "IS_A" },
+      { "source": "cat_yogurt", "target": "cat_dairy", "relation": "IS_A" },
+      { "source": "cat_cheese", "target": "cat_dairy", "relation": "IS_A" },
+  
+      { "source": "cat_soda", "target": "cat_beverages", "relation": "IS_A" },
+      { "source": "cat_juice", "target": "cat_beverages", "relation": "IS_A" },
+  
+      { "source": "cat_chips", "target": "cat_snacks", "relation": "IS_A" },
+      { "source": "cat_biscuits", "target": "cat_snacks", "relation": "IS_A" },
+  
+      {"source":"cat_milk","target":"cat_beverages","relation":"SIMILAR_TO"},
+      {"source":"cat_chips","target":"cat_biscuits","relation":"SIMILAR_TO"},
+  
+      { "source": "p_amul_taaza", "target": "cat_milk", "relation": "IS_A" },
+      { "source": "p_amul_taaza", "target": "brand_amul", "relation": "HAS_BRAND" },
+      { "source": "p_amul_taaza", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_amul_gold", "target": "cat_milk", "relation": "IS_A" },
+      { "source": "p_amul_gold", "target": "brand_amul", "relation": "HAS_BRAND" },
+      { "source": "p_amul_gold", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_nestle_a_plus", "target": "cat_milk", "relation": "IS_A" },
+      { "source": "p_nestle_a_plus", "target": "brand_nestle", "relation": "HAS_BRAND" },
+      { "source": "p_nestle_a_plus", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_sofit_soymilk", "target": "cat_milk", "relation": "IS_A" },
+      { "source": "p_sofit_soymilk", "target": "brand_sofit", "relation": "HAS_BRAND" },
+      { "source": "p_sofit_soymilk", "target": "attr_lactose_free", "relation": "HAS_ATTRIBUTE" },
+      { "source": "p_sofit_soymilk", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_amul_masti", "target": "cat_yogurt", "relation": "IS_A" },
+      { "source": "p_amul_masti", "target": "brand_amul", "relation": "HAS_BRAND" },
+      { "source": "p_amul_masti", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_nestle_curd", "target": "cat_yogurt", "relation": "IS_A" },
+      { "source": "p_nestle_curd", "target": "brand_nestle", "relation": "HAS_BRAND" },
+      { "source": "p_nestle_curd", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+      { "source": "p_nestle_curd", "target": "attr_low_fat", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_coke_classic", "target": "cat_soda", "relation": "IS_A" },
+      { "source": "p_coke_classic", "target": "brand_coke", "relation": "HAS_BRAND" },
+      { "source": "p_coke_classic", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_coke_diet", "target": "cat_soda", "relation": "IS_A" },
+      { "source": "p_coke_diet", "target": "brand_coke", "relation": "HAS_BRAND" },
+      { "source": "p_coke_diet", "target": "attr_sugar_free", "relation": "HAS_ATTRIBUTE" },
+      { "source": "p_coke_diet", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_pepsi_regular", "target": "cat_soda", "relation": "IS_A" },
+      { "source": "p_pepsi_regular", "target": "brand_pepsi", "relation": "HAS_BRAND" },
+      { "source": "p_pepsi_regular", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_real_orange", "target": "cat_juice", "relation": "IS_A" },
+      { "source": "p_real_orange", "target": "brand_real", "relation": "HAS_BRAND" },
+      { "source": "p_real_orange", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_lays_classic", "target": "cat_chips", "relation": "IS_A" },
+      { "source": "p_lays_classic", "target": "brand_lays", "relation": "HAS_BRAND" },
+      { "source": "p_lays_classic", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_lays_onion", "target": "cat_chips", "relation": "IS_A" },
+      { "source": "p_lays_onion", "target": "brand_lays", "relation": "HAS_BRAND" },
+      { "source": "p_lays_onion", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_pringles_orig", "target": "cat_chips", "relation": "IS_A" },
+      { "source": "p_pringles_orig", "target": "brand_pringles", "relation": "HAS_BRAND" },
+      { "source": "p_pringles_orig", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_brit_marie", "target": "cat_biscuits", "relation": "IS_A" },
+      { "source": "p_brit_marie", "target": "brand_britannia", "relation": "HAS_BRAND" },
+      { "source": "p_brit_marie", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+      { "source": "p_brit_marie", "target": "attr_low_fat", "relation": "HAS_ATTRIBUTE" },
+  
+      { "source": "p_brit_digestive", "target": "cat_biscuits", "relation": "IS_A" },
+      { "source": "p_brit_digestive", "target": "brand_britannia", "relation": "HAS_BRAND" },
+      { "source": "p_brit_digestive", "target": "attr_sugar_free", "relation": "HAS_ATTRIBUTE" },
+      { "source": "p_brit_digestive", "target": "attr_veg", "relation": "HAS_ATTRIBUTE" },
+      
+      { "source": "p_amul_taaza", "target": "p_amul_gold", "relation": "SIMILAR_TO" },
+      { "source": "p_coke_classic", "target": "p_pepsi_regular", "relation": "SIMILAR_TO" },
+      { "source": "p_lays_classic", "target": "p_pringles_orig", "relation": "SIMILAR_TO" }
+    ]
+  }
