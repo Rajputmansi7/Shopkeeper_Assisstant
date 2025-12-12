@@ -4,7 +4,7 @@ A **Knowledge Graph-based** AI assistant that suggests intelligent product subst
 
 This project implements **classical AI reasoning** (Graph Search + Rule-based Logic) without using Machine Learning, Embeddings, or LLMs, ensuring deterministic and explainable results.
 
-### 🔗 **[Click Here to View Deployed App](https://share.streamlit.io)**
+### 🔗 **[Click Here to View Deployed App](https://shopk-assisstance.streamlit.app)**
 
 -----
 
@@ -98,7 +98,7 @@ To run this project on your local machine:
 1.  **Clone the Repository**
 
     ```bash
-    git clone https://github.com/your-username/shopkeeper-assistant.git
+    git clone https://github.com/Rajputmansi7/shopkeeper-assistant.git
     cd shopkeeper-assistant
     ```
 
